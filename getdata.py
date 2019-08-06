@@ -25,19 +25,16 @@ def request(appkey,currency,m="GET"):
         if res:
              error_code=res["error_code"]
              if error_code==0:
-                 pprint(res["result"])
+                 for data in res["result"]:
+                     results=data.values()
+                     for result in results:
+                         if result["currency"]==currency:
+                             print("{}:{}".format(result["currency"],result["buyPic"]))
 
              else:
-                 pprint("%s:%s" % (res["error_code"],res["reason"]))
-                 
+                 pprint("%s:%s" % (res["error_code"],res["reason"]))                
         else:
             pprint("request api error")
-        for data in res["result"]:
-            ##if data["currency"]==currency:
-            ##  print("{}:{}".format(data["currency"],data["buyPic"]))
-              results=data.values()
-              for result in results:
-                  if result["currency"]==currency:
-                      print("{}:{}".format(result["currency"],result["buyPic"]))
+            
 if __name__=="__main__":
         main()       
