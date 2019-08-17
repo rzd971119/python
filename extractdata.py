@@ -5,7 +5,6 @@ Created on Fri Aug 16 18:13:33 2019
 
 @author: rzd
 """
-
 from getdata import request
 from train_data import interprete
 interpreter=interprete()
