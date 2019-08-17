@@ -3,11 +3,8 @@ import json
 from urllib.request import urlopen
 from urllib.parse import urlencode
 from pprint import pprint
-def main():
-        appkey="509e7b45fabab2432bc58127ee77525f"
-        request(appkey,"美元人民币")
 
-def request(appkey,currency,m="GET"):
+def request(appkey="509e7b45fabab2432bc58127ee77525f",m="GET"):
         
         url = "http://web.juhe.cn:8080/finance/exchange/frate"
         params = {
@@ -25,16 +22,16 @@ def request(appkey,currency,m="GET"):
         if res:
              error_code=res["error_code"]
              if error_code==0:
-                 for data in res["result"]:
-                     results=data.values()
-                     for result in results:
-                         if result["currency"]==currency:
-                             print("{}:{}".format(result["currency"],result["buyPic"]))
-
+                 return res["result"]
              else:
-                 pprint("%s:%s" % (res["error_code"],res["reason"]))                
+                 pprint("%s:%s" % (res["error_code"],res["reason"]))
+                 return None
         else:
             pprint("request api error")
+            return None
+        
+
+    
+        
             
-if __name__=="__main__":
-        main()       
+      

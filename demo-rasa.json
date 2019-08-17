@@ -15,7 +15,7 @@
                 "value": "CNY",
                 "synonyms": [
                     "Chinese",
-                    "Chines",
+                    "China",
                     "chinese"
                 ]
             },
@@ -72,6 +72,40 @@
                     "europe",
                     "eu"
                 ]
+            },
+            {
+                "value": "exchange rate",
+                "synonyms": [
+                    "exchange ratio",
+                    "currency exchange ratio"
+                ]
+            },
+            {
+                "value": "maximum",
+                "synonyms": [
+                    "max",
+                    "highest",
+                    "maximm"
+                ]
+            },
+            {
+                "value": "what's",
+                "synonyms": [
+                    "i'm wondering",
+                    "tell me",
+                    "show me",
+                    "give me",
+                    "can you tell me",
+                    "i wnat to know"
+                ]
+            },
+            {
+                "value": "minimum",
+                "synonyms": [
+                    "min",
+                    "lowest",
+                    "mi"
+                ]
             }
         ],
         "common_examples": [
@@ -81,8 +115,95 @@
                 "entities": []
             },
             {
+                "text": "JPY",
+                "intent": "specify_currency",
+                "entities": [
+                    {
+                        "start": 0,
+                        "end": 3,
+                        "value": "JPY",
+                        "entity": "currency"
+                    }
+                ]
+            },
+            {
+                "text": "CNY",
+                "intent": "specify_currency",
+                "entities": [
+                    {
+                        "start": 0,
+                        "end": 3,
+                        "value": "CNY",
+                        "entity": "currency"
+                    }
+                ]
+            },
+            {
+                "text": "HKD",
+                "intent": "specify_currency",
+                "entities": [
+                    {
+                        "start": 0,
+                        "end": 3,
+                        "value": "HKD",
+                        "entity": "currency"
+                    }
+                ]
+            },
+            {
+                "text": "CHF",
+                "intent": "specify_currency",
+                "entities": [
+                    {
+                        "start": 0,
+                        "end": 3,
+                        "value": "CHF",
+                        "entity": "currency"
+                    }
+                ]
+            },
+            {
+                "text": "TWD",
+                "intent": "specify_currency",
+                "entities": [
+                    {
+                        "start": 0,
+                        "end": 3,
+                        "value": "TWD",
+                        "entity": "currency"
+                    }
+                ]
+            },
+            {
+                "text": "MYR",
+                "intent": "specify_currency",
+                "entities": [
+                    {
+                        "start": 0,
+                        "end": 3,
+                        "value": "MYR",
+                        "entity": "currency"
+                    }
+                ]
+            },
+            {
                 "text": "howdy",
                 "intent": "greet",
+                "entities": []
+            },
+            {
+                "text": "what can you do",
+                "intent": "help",
+                "entities": []
+            },
+            {
+                "text": "what's your function",
+                "intent": "help",
+                "entities": []
+            },
+            {
+                "text": "help me",
+                "intent": "help",
                 "entities": []
             },
             {
@@ -173,170 +294,276 @@
             {
                 "text": "i'm wondering the exchange rate",
                 "intent": "currency_search",
-                "entities": []
+                "entities": [
+                    {
+                        "start": 18,
+                        "end": 31,
+                        "value": "exchange rate",
+                        "entity": "condition"
+                    }
+                ]
             },
             {
                 "text": "I want to know the currency ratio",
                 "intent": "currency_search",
-                "entities": []
-            },
-            {
-                "text": "I am searching for a dinner spot",
-                "intent": "restaurant_search",
-                "entities": []
-            },
-            {
-                "text": "i'm looking for a place in the north of town",
-                "intent": "restaurant_search",
                 "entities": [
                     {
-                        "start": 31,
-                        "end": 36,
-                        "value": "north",
-                        "entity": "location"
+                        "start": 19,
+                        "end": 33,
+                        "value": "exchange rate",
+                        "entity": "condition"
                     }
                 ]
             },
             {
-                "text": "show me chinese restaurants",
-                "intent": "restaurant_search",
-                "entities": [
-                    {
-                        "start": 8,
-                        "end": 15,
-                        "value": "chinese",
-                        "entity": "cuisine"
-                    }
-                ]
-            },
-            {
-                "text": "show me chines restaurants in the north",
-                "intent": "restaurant_search",
-                "entities": [
-                    {
-                        "start": 8,
-                        "end": 14,
-                        "value": "chinese",
-                        "entity": "cuisine"
-                    },
-                    {
-                        "start": 34,
-                        "end": 39,
-                        "value": "north",
-                        "entity": "location"
-                    }
-                ]
-            },
-            {
-                "text": "show me a mexican place in the centre",
-                "intent": "restaurant_search",
-                "entities": [
-                    {
-                        "start": 31,
-                        "end": 37,
-                        "value": "centre",
-                        "entity": "location"
-                    },
-                    {
-                        "start": 10,
-                        "end": 17,
-                        "value": "mexican",
-                        "entity": "cuisine"
-                    }
-                ]
-            },
-            {
-                "text": "i am looking for an indian spot called olaolaolaolaolaola",
-                "intent": "restaurant_search",
+                "text": "can you tell me the exchange rate now please",
+                "intent": "currency_search",
                 "entities": [
                     {
                         "start": 20,
-                        "end": 26,
-                        "value": "indian",
-                        "entity": "cuisine"
+                        "end": 33,
+                        "value": "exchange rate",
+                        "entity": "condition"
                     }
                 ]
             },
             {
-                "text": "search for restaurants",
-                "intent": "restaurant_search",
-                "entities": []
-            },
-            {
-                "text": "anywhere in the west",
-                "intent": "restaurant_search",
+                "text": "give me the maximum price between CHF and HKD",
+                "intent": "currency_search",
                 "entities": [
                     {
-                        "start": 16,
-                        "end": 20,
-                        "value": "west",
-                        "entity": "location"
-                    }
-                ]
-            },
-            {
-                "text": "anywhere near 18328",
-                "intent": "restaurant_search",
-                "entities": [
+                        "start": 33,
+                        "end": 36,
+                        "value": "CHF",
+                        "entity": "currency"
+                    },
                     {
-                        "start": 14,
+                        "start": 41,
+                        "end": 44,
+                        "value": "HKD",
+                        "entity": "currency"
+                    },
+                    {
+                        "start": 12,
                         "end": 19,
-                        "value": "18328",
-                        "entity": "location"
+                        "value": "maximum",
+                        "entity": "condition"
                     }
                 ]
             },
             {
-                "text": "I am looking for asian fusion food",
-                "intent": "restaurant_search",
-                "entities": [
-                    {
-                        "start": 17,
-                        "end": 29,
-                        "value": "asian fusion",
-                        "entity": "cuisine"
-                    }
-                ]
-            },
-            {
-                "text": "I am looking a restaurant in 29432",
-                "intent": "restaurant_search",
+                "text": "what's the max price between HKD and JPY today",
+                "intent": "currency_search",
                 "entities": [
                     {
                         "start": 29,
-                        "end": 34,
-                        "value": "29432",
-                        "entity": "location"
-                    }
-                ]
-            },
-            {
-                "text": "I am looking for mexican indian fusion",
-                "intent": "restaurant_search",
-                "entities": [
-                    {
-                        "start": 17,
-                        "end": 38,
-                        "value": "mexican indian fusion",
-                        "entity": "cuisine"
-                    }
-                ]
-            },
-            {
-                "text": "central indian restaurant",
-                "intent": "restaurant_search",
-                "entities": [
-                    {
-                        "start": 0,
-                        "end": 7,
-                        "value": "central",
-                        "entity": "location"
+                        "end": 32,
+                        "value": "HKD",
+                        "entity": "currency"
                     },
                     {
-                        "start": 8,
+                        "start": 37,
+                        "end": 40,
+                        "value": "JPY",
+                        "entity": "currency"
+                    },
+                    {
+                        "start": 11,
                         "end": 14,
-                        "value": "indian",
-                        "entity": "cuisine"
+                        "value": "maximum",
+                        "entity": "condition"
+                    }
+                ]
+            },
+            {
+                "text": "show me the max price please",
+                "intent": "currency_search",
+                "entities": [
+                    {
+                        "start": 12,
+                        "end": 15,
+                        "value": "maximum",
+                        "entity": "condition"
+                    }
+                ]
+            },
+            {
+                "text": "i'd like to know the min price today",
+                "intent": "currency_search",
+                "entities": [
+                    {
+                        "start": 21,
+                        "end": 24,
+                        "value": "minimum",
+                        "entity": "condition"
+                    }
+                ]
+            },
+            {
+                "text": "i'm wondering the minimun price between USD and CNY",
+                "intent": "currency_search",
+                "entities": [
+                    {
+                        "start": 40,
+                        "end": 43,
+                        "value": "USD",
+                        "entity": "currency"
+                    },
+                    {
+                        "start": 48,
+                        "end": 51,
+                        "value": "CNY",
+                        "entity": "currency"
+                    },
+                    {
+                        "start": 18,
+                        "end": 25,
+                        "value": "minimum",
+                        "entity": "condition"
+                    }
+                ]
+            },
+            {
+                "text": "tell me the different percentage",
+                "intent": "currency_search",
+                "entities": [
+                    {
+                        "start": 12,
+                        "end": 32,
+                        "value": "different percentage",
+                        "entity": "condition"
+                    }
+                ]
+            },
+            {
+                "text": "what's the different percentage between CHF and JPY",
+                "intent": "currency_search",
+                "entities": [
+                    {
+                        "start": 40,
+                        "end": 43,
+                        "value": "CHF",
+                        "entity": "currency"
+                    },
+                    {
+                        "start": 48,
+                        "end": 51,
+                        "value": "JPY",
+                        "entity": "currency"
+                    },
+                    {
+                        "start": 11,
+                        "end": 31,
+                        "value": "different percentage",
+                        "entity": "condition"
+                    }
+                ]
+            },
+            {
+                "text": "show me the open price please",
+                "intent": "currency_search",
+                "entities": [
+                    {
+                        "start": 12,
+                        "end": 22,
+                        "value": "open price",
+                        "entity": "condition"
+                    }
+                ]
+            },
+            {
+                "text": "i want to know the open price between USD and CHF",
+                "intent": "currency_search",
+                "entities": [
+                    {
+                        "start": 38,
+                        "end": 41,
+                        "value": "USD",
+                        "entity": "currency"
+                    },
+                    {
+                        "start": 46,
+                        "end": 49,
+                        "value": "CHF",
+                        "entity": "currency"
+                    },
+                    {
+                        "start": 19,
+                        "end": 29,
+                        "value": "open price",
+                        "entity": "condition"
+                    }
+                ]
+            },
+            {
+                "text": "what's the yesterday price between USD and CAD",
+                "intent": "currency_search",
+                "entities": [
+                    {
+                        "start": 35,
+                        "end": 38,
+                        "value": "USD",
+                        "entity": "currency"
+                    },
+                    {
+                        "start": 43,
+                        "end": 46,
+                        "value": "CAD",
+                        "entity": "currency"
+                    },
+                    {
+                        "start": 11,
+                        "end": 26,
+                        "value": "yesterday price",
+                        "entity": "condition"
+                    }
+                ]
+            },
+            {
+                "text": "can you tell me the yesterday price",
+                "intent": "currency_search",
+                "entities": [
+                    {
+                        "start": 20,
+                        "end": 35,
+                        "value": "yesterday price",
+                        "entity": "condition"
+                    }
+                ]
+            },
+            {
+                "text": "i am searching for the change amount between USD and HKD",
+                "intent": "currency_search",
+                "entities": [
+                    {
+                        "start": 41,
+                        "end": 44,
+                        "value": "USD",
+                        "entity": "currency"
+                    },
+                    {
+                        "start": 49,
+                        "end": 52,
+                        "value": "HKD",
+                        "entity": "currency"
+                    },
+                    {
+                        "start": 23,
+                        "end": 36,
+                        "value": "change amount",
+                        "entity": "condition"
+                    }
+                ]
+            },
+            {
+                "text": "show me the change amount",
+                "intent": "currency_search",
+                "entities": [
+                    {
+                        "start": 12,
+                        "end": 25,
+                        "value": "change amount",
+                        "entity": "condition"
                     }
                 ]
             },
@@ -378,83 +605,6 @@
             {
                 "text": "have a good one",
                 "intent": "goodbye",
-                "entities": []
-            },
-            {
-                "text": "a cheap hotel in the north",
-                "intent": "hotel_search",
-                "entities": [
-                    {
-                        "start": 2,
-                        "end": 7,
-                        "value": "cheap",
-                        "entity": "price"
-                    },
-                    {
-                        "start": 21,
-                        "end": 26,
-                        "value": "north",
-                        "entity": "area"
-                    }
-                ]
-            },
-            {
-                "text": "an expensive hotel in the south",
-                "intent": "hotel_search",
-                "entities": [
-                    {
-                        "start": 3,
-                        "end": 12,
-                        "value": "expensive",
-                        "entity": "price"
-                    },
-                    {
-                        "start": 26,
-                        "end": 31,
-                        "value": "south",
-                        "entity": "location"
-                    }
-                ]
-            },
-            {
-                "text": "a hotel in the downtown",
-                "intent": "hotel_search",
-                "entities": [
-                    {
-                        "start": 15,
-                        "end": 23,
-                        "value": "downtown",
-                        "entity": "location"
-                    }
-                ]
-            },
-            {
-                "text": "in the north of town",
-                "intent": "location",
-                "entities": [
-                    {
-                        "start": 7,
-                        "end": 12,
-                        "value": "north",
-                        "entity": "location"
-                    }
-                ]
-            },
-            {
-                "text": "in the south of town",
-                "intent": "location",
-                "entities": [
-                    {
-                        "start": 7,
-                        "end": 12,
-                        "value": "south",
-                        "entity": "location"
-                    }
-                ]
-            },
-            {
-                "text": "I want a mid range hotel",
-                "intent": "",
                 "entities": []
             }
         ]
