@@ -3,12 +3,12 @@ INIT=0
 CHOOSE_CURRENCY=1
 SEARCH=2
 policy={
-        (INIT,"currency_search"):(CHOOSE_CURRENCY,"what's the currency you want to search"),
-        (INIT,"help"):(INIT,"I can search for the information about currency rate on the base of USD"),
-        (CHOOSE_CURRENCY,"specify_currency"):(SEARCH,"OK,I'm doing ,just wait for a second please"),
-        (CHOOSE_CURRENCY,"help"):(CHOOSE_CURRENCY,"you need to tell me what's currency you want to know about,I can show you a list of currency I can help you:\n China:CHY\n Malaysia:MYR\n Canda:CAD\n Switzerland:CHF\n Japan:JPY\n Taiwan:TWD"),
+        (INIT,"currency_search"):(CHOOSE_CURRENCY,"what's the currency you want to search"), #ask the currency's kind
+        (INIT,"help"):(INIT,"I can search for the information about currency rate on the base of USD"), #help the user to understand the use of robot
+        (CHOOSE_CURRENCY,"specify_currency"):(SEARCH,"OK,I'm doing ,just wait for a second please"), 
+        (CHOOSE_CURRENCY,"help"):(CHOOSE_CURRENCY,"you need to tell me what's currency you want to know about,I can show you a list of currency I can help you:\n China:CHY\n Malaysia:MYR\n Canda:CAD\n Switzerland:CHF\n Japan:JPY\n Taiwan:TWD"),#list the currency's code
         (SEARCH,"currency_search"):(SEARCH,"OK,just a few seconds"),
-        (SEARCH,"goodbye"):(INIT,"I hope my help is usful")
+        (SEARCH,"goodbye"):(INIT,"I hope my help is usful") # wait for the next consultion
         }
 interpreter=interprete()
 def respond(policy,state,message):
