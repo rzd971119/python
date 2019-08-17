@@ -24,10 +24,8 @@ def request(appkey="509e7b45fabab2432bc58127ee77525f",m="GET"):
              if error_code==0:
                  return res["result"]
              else:
-                 pprint("%s:%s" % (res["error_code"],res["reason"]))
                  return None
         else:
-            pprint("request api error")
             return None
         
 
