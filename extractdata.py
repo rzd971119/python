@@ -18,7 +18,7 @@ map_condition={"maximum":"highPic",
               "yesterday price":"yesPic",
               "change amount":"diffAmo",
               "exchange rate":"buyPic"
-              }
+              } #将条件转化为接口可以接受的参数
 def get_entity_and_intent(message): #get entity and intent 
     entities={}
     entity_and_intent=interpreter.parse(message)
